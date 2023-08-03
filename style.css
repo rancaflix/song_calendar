@@ -1,0 +1,35 @@
+body {
+    background-color: lightgrey;
+}
+
+.homecard {
+    background-color: gray;
+    height: 90vh;
+    width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    text-align: center;
+}
+
+.todayis, .todaysongs {
+    padding-top: 10%;
+    padding-bottom: 10%;   
+}
+
+.todayis {
+    font-size: xx-large;
+}
+
+#calendarview {
+    box-sizing: border-box;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto;
+}
+
+.monthdiv {
+    padding: auto;
+}
