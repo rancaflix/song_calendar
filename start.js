@@ -4,7 +4,7 @@ import todaySongs from "./components/todaySongs.js"
 const body = document.body;
 
 const homecard = document.createElement("div");
-homecard.classList.add("homecard");
+homecard.id = "homecard";
 const todayIs = document.createElement("div");
 todayIs.classList.add("todayis");
 todayIs.textContent = `Today is ${localdate}`;
@@ -14,7 +14,7 @@ body.appendChild(homecard);
 homecard.appendChild(todaySongs);
 
 const moreButton = document.createElement("button");
-moreButton.classList.add("moreButton");
+moreButton.classList.add("button");
 moreButton.textContent = "Consult other days";
 moreButton.onclick = function() {
     location.assign("/calendar.html")

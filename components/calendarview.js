@@ -1,3 +1,4 @@
+import handleMonth from "./handleMonth.js";
 
 const calendarview = document.createElement("div");
 calendarview.id = "calendarview";
@@ -9,6 +10,7 @@ fetch('../constants/months.json')
             const div = document.createElement("div");
             div.classList.add("monthdiv");
             div.textContent = month;
+            div.addEventListener("click", () => handleMonth(month))
             return div;
         });
     monthDivs.forEach(div => calendarview.appendChild(div));

@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
 body {
     background-color: lightgrey;
 }
 
-.homecard {
+#homecard {
     background-color: gray;
     height: 90vh;
     width: 70vw;
@@ -26,10 +31,36 @@ body {
     padding-left: 5%;
     padding-right: 5%;
     display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto auto auto;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 3fr 3fr 3fr;
+    align-items: center;
 }
 
 .monthdiv {
-    padding: auto;
+    text-align: center;
+    border: 1px solid black;
+}
+
+#monthsDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+#monthnamediv, #daynamediv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+#monthnamediv {
+    grid-area: 1/1/1/8;
+}
+
+#chevronleft, #chevronsleft {
+    max-width: 100%;
+    filter: invert(1);
 }
