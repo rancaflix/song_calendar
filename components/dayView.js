@@ -1,4 +1,5 @@
 import handleMonth from "./handleMonth.js";
+import querySong from "./querySong.js";
 
 const dayView = async (month, day) => {
     // make monthview disappear
@@ -36,6 +37,22 @@ const dayView = async (month, day) => {
         dayView.remove();
         handleMonth(month);
     })
+
+    // query songs
+    querySong(month, day)
+    .then(songs => {
+        if (songs.length > 0){
+            songs.forEach(song => {
+                const songInfo = document.createElement("p");
+                songInfo.textContent = `${song.Artist} - ${song.Song}`
+                dayView.appendChild(songInfo);                
+            });
+        } else {
+            const songInfo = document.createElement("p");
+            songInfo.textContent = "No songs for today";
+            dayView.appendChild(songInfo);
+        }
+    });
 }
 
 export default dayView;

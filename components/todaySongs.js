@@ -6,10 +6,19 @@ todaysongs.classList.add("todaysongs");
 
 const monthToFetch = today.toLocaleString('en-US', { month: 'long' }); // Get the full month name
 const dayToFetch = today.getDate();
+
 querySong(monthToFetch, dayToFetch)
     .then(songs => {
-        console.log(`Songs for ${monthToFetch} ${dayToFetch}:`, songs);});
+        if (songs.length > 0){
+            songs.forEach(song => {
+                const songInfo = document.createElement("p");
+                songInfo.textContent = `${song.Artist} - ${song.Song}`
+                todaysongs.appendChild(songInfo);                
+            });
+        } else {
+            todaysongs.textContent = "No songs for today";
+        }
+    });
 
-todaysongs.textContent = "The songs for today are:"
 
 export default todaysongs;
