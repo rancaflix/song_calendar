@@ -46,11 +46,15 @@ const monthView = async (month) => {
             // Now you have the number of days, you can use it to create the divs
             for (let day = 1; day <= numberOfDays; day++) {
                 const dayDiv = document.createElement('div');
-                dayDiv.textContent = day;
+                dayDiv.classList.add('daynumber');
+                const daySpan = document.createElement('span');
+                daySpan.textContent = day;
+                daySpan.classList.add('dayspan')
                 dayDiv.addEventListener("click", () => {
                     handleDay(month, day);
                     monthsDiv.remove();
                 })
+                dayDiv.appendChild(daySpan);
                 monthsDiv.appendChild(dayDiv);
             }
         } else {

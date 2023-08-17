@@ -14,7 +14,7 @@ body.appendChild(homecard);
 homecard.appendChild(todaySongs);
 
 const moreButton = document.createElement("button");
-moreButton.classList.add("button");
+moreButton.id = "consultMoreButton";
 moreButton.textContent = "Consult other days";
 moreButton.onclick = function() {
     location.assign("/calendar.html")

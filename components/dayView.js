@@ -44,12 +44,12 @@ const dayView = async (month, day) => {
         if (songs.length > 0){
             songs.forEach(song => {
                 const songInfo = document.createElement("p");
-                songInfo.textContent = `${song.Artist} - ${song.Song}`
+                songInfo.textContent = `${song.Artist} - ${song.Song} (${song.Language})`
                 dayView.appendChild(songInfo);                
             });
         } else {
             const songInfo = document.createElement("p");
-            songInfo.textContent = "No songs for today";
+            songInfo.textContent = "No songs for this day";
             dayView.appendChild(songInfo);
         }
     });

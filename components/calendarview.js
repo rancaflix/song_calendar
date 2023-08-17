@@ -9,7 +9,10 @@ fetch('../constants/months.json')
         const monthDivs = monthNames.map(month => {
             const div = document.createElement("div");
             div.classList.add("monthdiv");
-            div.textContent = month;
+            const span = document.createElement("span");
+            span.classList.add("monthspan");
+            span.textContent = month;
+            div.appendChild(span);
             div.addEventListener("click", () => handleMonth(month))
             return div;
         });
