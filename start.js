@@ -1,5 +1,5 @@
-import localdate from "./components/getToday.js";
-import todaySongs from "./components/todaySongs.js"
+import localdate from "./getToday.js";
+import todaySongs from "./todaySongs.js"
 
 const body = document.body;
 
