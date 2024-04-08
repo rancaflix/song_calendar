@@ -95,7 +95,7 @@
         "Day": 20,
         "Language": "Español",
         "Artist": "La Oreja de van Gogh",
-        "Song": "Rosas"
+        "Song": "20 de Enero"
     },
     {
         "Month": "January",
@@ -635,6 +635,13 @@
         "Language": "English",
         "Artist": "Ted Leo and the Pharmacists",
         "Song": "Bottled in Cork"
+    },
+    {
+        "Month": "May",
+        "Day": 9,
+        "Language": "English",
+        "Artist": "Khruangbin",
+        "Song": "May Ninth"
     },
     {
         "Month": "May",
